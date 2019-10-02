@@ -1,41 +1,31 @@
 import * as actionTypes from './actionTypes';
-import axios from '../../axios-families';
 
-export const addFamily = (family) => {
+export const addFamily = name => {
     return {
         type: actionTypes.ADD_FAMILY,
-        name: family
+        name
     }
 }
 
-export const removeFamily = (family) => {
+export const removeFamily = id => {
     return {
         type: actionTypes.REMOVE_FAMILY,
-        name: family
+        id
     }
 }
 
-export const setFamily = (families) => {
+export const addPerson = (firstname, lastname, famId) => {
     return {
-        type: actionTypes.SET_FAMILY,
-        families: families
+        type: actionTypes.ADD_PERSON,
+        firstname,
+        lastname,
+        famId
     }
 }
 
-export const fetchFamiliesFail = () => {
+export const removePerson = id => {
     return {
-        type: actionTypes.FETCH_FAMILIES_FAIL
-    }
-}
-
-export const initFamilies = () => {
-    return dispatch => {
-        axios.get('https://react-family-tree.firebaseio.com/families.json')
-            .then(res => {
-                dispatch(setFamily(res.data))
-            })
-            .catch(err => {
-                dispatch(fetchFamiliesFail())
-            })
+        type: actionTypes.REMOVE_PERSON,
+        id
     }
 }

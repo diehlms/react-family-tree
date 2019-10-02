@@ -1,12 +1,5 @@
 export const ADD_FAMILY = 'ADD_FAMILY';
 export const REMOVE_FAMILY = 'REMOVE_FAMILY';
-export const SET_FAMILY = 'SET_FAMILY';
 
 export const ADD_PERSON = 'ADD_PERSON';
 export const REMOVE_PERSON = 'REMOVE_PERSON';
-export const SET_PERSON = 'SET_PERSON';
-
-export const FETCH_FAMILIES = 'FETCH_FAMILIES';
-export const FETCH_FAMILIES_FAIL = 'FETCH_FAMILIES_FAIL';
-export const FETCH_PEOPLE = 'FETCH_PEOPLE';
-export const FETCH_PEOPLE_FAIL = 'FETCH_PEOPLE_FAIL';

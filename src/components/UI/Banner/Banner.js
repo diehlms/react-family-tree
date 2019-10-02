@@ -1,12 +1,16 @@
 import React from 'react'
-import Aux from '../../../hoc/Aux/Aux'
+import { Link } from 'react-router-dom'
 import './Banner.css'
 
 
 export default function Banner() {
     return (
-        <Aux>
+        <div>
             <h1 className="title">Family Tree</h1>
-        </Aux>
+            <ul>
+                <li><Link to='/home'>Home</Link></li>
+                <li><Link to='/about'>About</Link></li>
+            </ul>
+        </div>
     )
 }
